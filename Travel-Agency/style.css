@@ -1,0 +1,69 @@
+/*backgroound image*/
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center center/cover no-repeat;
+}
+
+/*Navbar*/
+.custom-navbar {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+}
+  
+.custom-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+  
+.custom-navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+.custom-navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+.custom-navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+/*Icone menu*/
+#menu-toggle, .menu-icon {
+    display: none;
+}
+  
+/* Responsive */
+@media (max-width: 768px) {
+    
+    .menu-icon {
+      display: block;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  
+    
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 200px;
+      padding: 10px;
+    }
+  
+    
+    #menu-toggle:checked + .menu-icon + .nav-links {
+      display: flex;
+    }
+}
+  

@@ -1,0 +1,70 @@
+/*backgroound image*/
+.hero {
+  background: url('./images/Delicious\ dish.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/*Navbar*/
+.restaurant-navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 0;
+}
+
+.restaurant-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.restaurant-navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.restaurant-navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.restaurant-navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+}
+  
+/*Icone menu*/
+#menu-toggle,
+.menu-icon {
+  display: none;
+}
+  
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #34495e;
+    width: 200px;
+    padding: 10px;
+  }
+    
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
